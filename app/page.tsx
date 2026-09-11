@@ -1,6 +1,7 @@
 import { Navbar } from "./components/Navbar";
 import heroStyles from "./hero.module.css";
 import aboutStyles from "./about.module.css";
+import mandateStyles from "./mandate.module.css";
 
 export default function Home() {
   return (
@@ -109,6 +110,60 @@ export default function Home() {
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="mandate" className={mandateStyles.section} aria-labelledby="mandate-title">
+        <div className={mandateStyles.inner}>
+          <div className={mandateStyles.top}>
+            <div>
+              <p className={mandateStyles.eyebrow}>The Apostolic Mandate</p>
+              <h2 id="mandate-title" className={mandateStyles.title}>
+                Raising arrows for the purposes of God.
+              </h2>
+            </div>
+            <p className={mandateStyles.intro}>
+              The assignment is centered on raising and equipping end-time ministers
+              who are deeply rooted in Christ, grounded in sound doctrine, committed
+              to prayer, and prepared to fulfill God&apos;s purpose in their generation.
+            </p>
+          </div>
+
+          <div className={mandateStyles.statement}>
+            <p className={mandateStyles.statementText}>
+              To see lives awakened to God and a generation equipped to carry His
+              presence and advance the cause of Christ.
+            </p>
+            <div className={mandateStyles.mark} aria-hidden="true">EM</div>
+          </div>
+
+          <div className={mandateStyles.pillars} aria-label="Apostolic mandate pillars">
+            <article className={mandateStyles.pillar}>
+              <span className={mandateStyles.number}>01</span>
+              <h3>Know Christ</h3>
+              <p>Rooted in Christ and growing in genuine devotion to Him.</p>
+            </article>
+            <article className={mandateStyles.pillar}>
+              <span className={mandateStyles.number}>02</span>
+              <h3>Sound Doctrine</h3>
+              <p>Grounded in biblical truth and prepared to stand firmly in the faith.</p>
+            </article>
+            <article className={mandateStyles.pillar}>
+              <span className={mandateStyles.number}>03</span>
+              <h3>Prayer</h3>
+              <p>Committed to the place of prayer, intercession, and dependence on God.</p>
+            </article>
+            <article className={mandateStyles.pillar}>
+              <span className={mandateStyles.number}>04</span>
+              <h3>Gospel Advance</h3>
+              <p>Taking the Gospel beyond church walls to campuses, cities, and territories.</p>
+            </article>
+            <article className={mandateStyles.pillar}>
+              <span className={mandateStyles.number}>05</span>
+              <h3>Equip &amp; Send</h3>
+              <p>Preparing men and women to fulfill God&apos;s purpose in their generation.</p>
+            </article>
           </div>
         </div>
       </section>
