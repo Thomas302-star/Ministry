@@ -1,2 +1,51 @@
 import { Navbar } from "./components/Navbar";
-export default function Home(){return <main><Navbar/><section id="home" style={{minHeight:"70vh",display:"grid",placeItems:"center",padding:"7rem 1.5rem"}}><div style={{maxWidth:760,textAlign:"center"}}><p style={{color:"#1557b0",fontWeight:700,letterSpacing:".12em",textTransform:"uppercase"}}>Emmanuel Makanjuola Apostolic Missions</p><h1 style={{fontFamily:'"Playfair Display",serif',fontSize:"clamp(2.6rem,7vw,5rem)",lineHeight:1.05,margin:"1rem 0"}}>Raising a generation that knows God.</h1><p style={{color:"#60708c",fontSize:"1.1rem",lineHeight:1.8}}>Revival, prayer, discipleship, soul winning, and the equipping of end-time ministers.</p></div></section></main>}
+import styles from "./hero.module.css";
+
+export default function Home() {
+  return (
+    <main>
+      <Navbar />
+
+      <section id="home" className={styles.hero} aria-labelledby="hero-title">
+        <div className={styles.glow} aria-hidden="true" />
+        <div className={styles.grid} aria-hidden="true" />
+
+        <div className={styles.content}>
+          <p className={styles.eyebrow}>Emmanuel Makanjuola Apostolic Missions</p>
+
+          <h1 id="hero-title">
+            Raising a generation that <span>knows God.</span>
+          </h1>
+
+          <p className={styles.description}>
+            A ministry committed to revival, prayer, discipleship, soul winning,
+            and the equipping of end-time ministers to advance the Kingdom of God.
+          </p>
+
+          <div className={styles.actions}>
+            <a className={styles.primaryAction} href="#about">
+              Discover the Ministry
+            </a>
+            <a className={styles.secondaryAction} href="#gatherings">
+              Explore Our Gatherings
+            </a>
+          </div>
+
+          <div className={styles.pillars} aria-label="Ministry focus">
+            <span>Revival</span>
+            <span>Prayer</span>
+            <span>Discipleship</span>
+            <span>Soul Winning</span>
+            <span>Equipping</span>
+          </div>
+        </div>
+
+        <div className={styles.sideMark} aria-hidden="true">
+          <span>EM</span>
+          <div />
+          <small>APOSTOLIC MISSIONS</small>
+        </div>
+      </section>
+    </main>
+  );
+}
