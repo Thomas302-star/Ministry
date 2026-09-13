@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import supportStyles from "../support.module.css";
 
 export function CopyButton({ value }: { value: string }) {
   const [copied, setCopied] = useState(false);
@@ -18,6 +19,7 @@ export function CopyButton({ value }: { value: string }) {
   return (
     <button
       type="button"
+      className={supportStyles.copyButton}
       onClick={handleCopy}
       aria-label={copied ? `Copied ${value}` : `Copy ${value}`}
       title={copied ? "Copied" : "Copy"}
